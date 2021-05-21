@@ -1,0 +1,53 @@
+/*=================================
+  Footer styling starts here
+=================================*/
+footer {
+  .wrapper {
+    padding: 0 0 42px 2.77%; 
+    display: flex;
+    align-items: center;
+    @include media-max(767px) { flex-direction: column;} 
+    & > a { 
+      flex-basis: 16.51%; 
+      text-indent: -9999px;
+      img { float: right; }
+    }
+  }
+  .footerlist {
+    margin-left: 2.1%;
+
+    flex-basis: 80%;
+    display: flex;
+    @include media-max(767px) { 
+      margin-top: 20px;
+      flex-direction: column;
+    } 
+    a {
+      color: #000;
+      font-size: 22px;
+   }
+   @include media-max(767px) { padding: 10px 0; }
+   li:nth-child(2)::after {
+     content: '|';
+     margin: 0 20px 0 20px;
+     @include media-max(767px) { display: none;} 
+   } 
+   li:nth-child(2)::before {
+    content: '|';
+    margin: 0 20px 0 20px;
+    @include media-max(767px) { display: none;} 
+  } 
+  li { 
+    @include media-max(767px) {
+      &:last-of-type {     border-bottom: none;  } 
+    padding: 10px; 
+    border-bottom: 2px solid #000;
+    text-align: center;
+  } 
+}
+  }
+}
+
+/*=================================
+  Footer styling ends here
+=================================*/

@@ -1,0 +1,75 @@
+@import colors
+$primary_color : #abcdef
+body
+  background-color: $primary_color
+
+@mixin important-text 
+  color: red
+  font-size: 25px
+  font-weight: bold
+  border: 1px solid blue
+
+
+@mixin bordered($color, $width) 
+  border: $width solid $color
+
+@mixin center-para
+  width: 70%
+  margin: 0 auto
+
+
+
+.danger
+  @include important-text
+  @include center-para
+  background-color:yellow  
+
+.success 
+  @include center-para
+  background-color: $success_color 
+
+ul
+  span 
+    background-color:$secondary_color
+
+.demolist 
+  @include bordered(#0000ff , 1px)
+  color:red
+
+@mixin position($position, $top: null ,$right: null ,$bottom: null ,$left: null) 
+  position: $position
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+  
+.pos-para
+  @include position($position:relative,$left:100px)  
+
+=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+
+.box
+  +transform(translateY(20px))  
+
+
+//Inheritance 
+/* This CSS will print because %message-shared is extended. */
+%message-shared
+  border: 1px solid #ccc
+  padding: 10px
+  color: #333
+
+.success-msg
+  @extend %message-shared
+  border-color: green
+
+.error-msg
+  @extend %message-shared
+  border-color: red 
+
+
+
+

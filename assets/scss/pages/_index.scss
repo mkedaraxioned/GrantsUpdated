@@ -1,0 +1,345 @@
+
+
+/*=================================
+  section 1 css starts here
+=================================*/
+.hero-section {
+  &__title { 
+      width: 84%;
+      margin-left: 4.12%;
+      position: absolute;
+      // transform: translateY(-157px);
+      transform: translateY(-198%);
+      // font-size: 50px;
+      font-family: 'Kalam', cursive;
+      font-weight: 700;
+      @include fluid-type(320px, 1903px, 20px, 50px);
+  }
+  @include media-max(767px) {   &__img > img { height: 280px; }  }
+}
+
+
+.section1 {
+  .wrapper { padding-top: 57px; }
+
+  &__title {
+      // font-size: 56px;
+      @include fluid-type(320px, 1903px, 30px, 56px);
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+  }
+
+  &__para { 
+    width: 80.59%;
+    margin: 25px auto 0;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    @include media-max(767px) { width: 100%; } 
+  }
+  .infolist {
+      margin-top: 90px;
+      padding: 18px 0;
+      border-top: 2px solid #a8ad00;
+      border-bottom: 2px solid #a8ad00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      @include media-max(767px) { flex-direction: column; }
+      li {
+        margin-right: 2.8%;
+        font-size: 20px;
+        text-transform: uppercase;
+        @include media-max(767px) { padding: 15px 1.5%; }
+      &:last-child { 
+        padding: 15px 1.5%;
+        border-radius: 10px;
+        background: orange;
+
+        a {
+          color: white;
+          font-weight: 700;
+          font-size: 22px;
+        }
+       }
+      }
+
+      a { color: #000; }
+  }
+}
+/*=================================
+  section 1 css ends here
+=================================*/
+
+/*=================================
+  section 2 css starts here
+=================================*/
+.section2 {
+  .wrapper { padding-bottom: 143px; }
+
+  &__title {
+    @include sec-title;
+    @include fluid-type(320px, 1903px, 30px, 45px);
+  }
+
+  &__para {
+    @include sec-para;
+  }
+
+  .objectivelist { 
+    width: 82.56%;
+    margin: 58px auto 0;
+    display: flex;
+    justify-content: space-between;
+    @include media-max(1023px) { flex-wrap: wrap; }
+
+    li { 
+      padding: 61px 0 166px;
+      flex-basis: 27.01%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      background-color: #a8ad00;
+      @include media-max(1023px) { 
+        flex-basis: 46%; 
+      &:last-of-type { margin-top: 50px; }
+      }
+      @include media-max(767px) { 
+       flex-basis: 100%; 
+       margin-top: 50px;
+      }
+    }
+  }
+  &__fig { 
+    width: 45.85%; 
+    img { border-radius: 50%; }
+  }
+  .sec2-title {
+    padding: 0 20px;
+    margin-top: 70px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    @include fluid-type(320px, 1903px, 20px, 26px);
+  }
+
+  &-para {
+    width: 72.37%;
+    margin-top: 29px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    @include media-max(767px) { width: 100%; }
+  }
+}
+
+/*=================================
+  section 2 css ends here
+=================================*/
+
+/*=================================
+  section 3 css starts here
+=================================*/
+
+.section3 {
+  .wrapper { 
+    padding-bottom: 100px;
+    border-top: 2px solid #a8ad00; 
+  }
+
+  &__title {
+    @include sec-title;
+    @include fluid-type(320px, 1903px, 30px, 45px);
+  }
+  &__para {
+    @include sec-para;
+  }
+  .prioritylist {
+    width: 77.01%;
+    margin: 56px auto 100px;
+    font-size: 19px;
+    letter-spacing: 1.5px;
+    @include media-max(767px) { width: 100%; }
+    li { 
+      margin-bottom: 38px; 
+      span { font-weight: 700; }
+      i { 
+        padding-right: 29px;
+        font-size: 27px; 
+      }
+    }
+    .fa-chevron-circle-right { color: #a8ad00; }
+  }
+  &__bottom { 
+    width: 92.42%;
+    margin: 0 auto;
+    @include sec-para; 
+    @include media-max(767px) { width: 100%; }
+  }
+
+}
+
+/*=================================
+  section 3 css ends here
+=================================*/
+
+/*=================================
+  section 4 css starts here
+=================================*/
+.section4 {
+  .wrapper { 
+    padding-bottom: 156px;
+    border-top: 2px solid #a8ad00;
+  }
+
+  &__title {
+    @include sec-title;
+    @include fluid-type(320px, 1903px, 30px, 45px);
+  }
+  &__para {
+    @include sec-para;
+  }
+
+  .communitylist { 
+    width: 86.01%;
+    margin: 67px auto 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    @include media-max(1023px) { flex-wrap: wrap; }
+    li { 
+      flex-basis: 28.93%; 
+    &:nth-child(2) { li:nth-of-type(2) { padding: 54px 0; }}
+    @include media-max(1023px) { flex-basis: 48%; }
+
+  }
+
+  & > li {
+    @include media-max(767px) { 
+      flex-basis: 100%; 
+      &:not(:first-of-type) {  margin-top: 50px; }
+    }
+  }
+  }
+
+  .community-title {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    background-color: #e7f2d7;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -2px;
+  }
+
+  .inner-community {
+  span { 
+    width: 66.86%;
+    margin: 0 auto;
+    display: block;
+    font-size: 21px;
+    line-height: 1.6;
+    @include media-max(767px) { width: 100%; }
+  }
+
+  li { 
+    width: 100%;
+    padding: 38px 0; 
+    background-color: #f9fcf5;
+    &:nth-child(3) { padding-bottom: 66px; }
+  }
+
+  li:nth-child(n+2) { 
+    width: 100%;
+    border-top: 2px solid #a8ad00; 
+  }
+
+  li:last-of-type {
+    width: initial;
+    padding: 15px 5%;
+    border-radius: 10px;
+    background: orange;
+    a { 
+      color: #ffffff;
+      display: flex;
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+}
+
+}
+
+
+/*=================================
+  section 4 css ends here
+=================================*/
+
+/*=================================
+  section 5 css starts here
+=================================*/
+
+.section5 {
+  .wrapper { border-top: 2px solid #a8ad00; }
+
+  &__title {
+    @include sec-title;
+    @include fluid-type(320px, 1903px, 30px, 45px);
+  }
+  &__para {
+    width: 90.08%;
+    @include sec-para;
+    margin: 0 auto;
+    @include media-max(767px) { width: 100%; }
+    span { 
+      margin: 35px 0 35px;
+      display: block; 
+    }
+  }
+  &__downloads {
+    width: 35.42%;
+    padding: 50px 0 60px;
+    margin: 0 auto;
+    border: 3px dashed #a8ad00;
+    background-color: #fff;
+    text-align: center;
+    transform: translateY(-50%);
+    @include media-max(1023px) { 
+      padding: 20px 0 30px; 
+      transform: translateY(-20%);
+    }
+    @include media-max(767px) { width: 70% }
+    h3 { 
+      // font-size: 35px;
+      @include fluid-type(320px, 1903px, 26px, 35px);
+      font-weight: 700;
+    }
+  }
+
+  .downloadlist {
+    width: 71.92%;
+    margin: 60px auto 0;
+    li {
+      display: flex;
+      align-items: center;
+      // font-size: 29px;
+      @include fluid-type(320px, 1903px, 20px, 29px);
+      &:nth-child(2) { margin: 60px 0 60px; }
+      i { 
+        margin-right: 20px;
+        // font-size: 68px; 
+        @include fluid-type(320px, 1903px, 40px, 68px);
+      }
+    }
+  }
+}
+
+
+/*=================================
+  section 5 css ends here
+=================================*/
+
