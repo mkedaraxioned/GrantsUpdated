@@ -8,9 +8,7 @@
       width: 84%;
       margin-left: 4.12%;
       position: absolute;
-      // transform: translateY(-157px);
       transform: translateY(-198%);
-      // font-size: 50px;
       font-family: 'Kalam', cursive;
       font-weight: 700;
       @include fluid-type(320px, 1903px, 20px, 50px);
@@ -41,11 +39,9 @@
   .infolist {
       margin-top: 90px;
       padding: 18px 0;
-      border-top: 2px solid #a8ad00;
-      border-bottom: 2px solid #a8ad00;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border-top: 2px solid $color_green;
+      border-bottom: 2px solid $color_green;
+      @include flex( null, center ,  center);
       text-align: center;
       @include media-max(767px) { flex-direction: column; }
       li {
@@ -56,17 +52,17 @@
       &:last-child { 
         padding: 15px 1.5%;
         border-radius: 10px;
-        background: orange;
+        background: $color_orange;
 
         a {
-          color: white;
+          color: color_light;
           font-weight: 700;
           font-size: 22px;
         }
        }
       }
 
-      a { color: #000; }
+      a { color: $color_dark; }
   }
 }
 /*=================================
@@ -91,17 +87,14 @@
   .objectivelist { 
     width: 82.56%;
     margin: 58px auto 0;
-    display: flex;
-    justify-content: space-between;
+    @include flex(null,space-between,null);
     @include media-max(1023px) { flex-wrap: wrap; }
 
     li { 
       padding: 61px 0 166px;
       flex-basis: 27.01%;
-      display: flex;
-      flex-direction: column;
-      align-items: center; 
-      background-color: #a8ad00;
+      @include flex(column,null,center);
+      background-color: $color_green;
       @include media-max(1023px) { 
         flex-basis: 46%; 
       &:last-of-type { margin-top: 50px; }
@@ -119,7 +112,7 @@
   .sec2-title {
     padding: 0 20px;
     margin-top: 70px;
-    color: #fff;
+    color: $color_light;
     font-size: 26px;
     font-weight: 700;
     text-align: center;
@@ -129,7 +122,7 @@
   &-para {
     width: 72.37%;
     margin-top: 29px;
-    color: #ffffff;
+    color: $color_light;
     font-size: 20px;
     font-weight: 700;
     line-height: 1.6;
@@ -149,7 +142,7 @@
 .section3 {
   .wrapper { 
     padding-bottom: 100px;
-    border-top: 2px solid #a8ad00; 
+    border-top: 2px solid $color_green; 
   }
 
   &__title {
@@ -168,12 +161,16 @@
     li { 
       margin-bottom: 38px; 
       span { font-weight: 700; }
-      i { 
-        padding-right: 29px;
-        font-size: 27px; 
-      }
     }
-    .fa-chevron-circle-right { color: #a8ad00; }
+
+    p::before {
+      padding-right: 29px;
+      content: "\f138";
+      color: $color_green;
+      font-family: "FontAwesome";
+      font-size: 27px;
+    }
+
   }
   &__bottom { 
     width: 92.42%;
@@ -194,7 +191,7 @@
 .section4 {
   .wrapper { 
     padding-bottom: 156px;
-    border-top: 2px solid #a8ad00;
+    border-top: 2px solid $color_green;
   }
 
   &__title {
@@ -208,8 +205,7 @@
   .communitylist { 
     width: 86.01%;
     margin: 67px auto 0;
-    display: flex;
-    justify-content: space-between;
+    @include flex(null , space-between,null);
     text-align: center;
     @include media-max(1023px) { flex-wrap: wrap; }
     li { 
@@ -255,16 +251,16 @@
 
   li:nth-child(n+2) { 
     width: 100%;
-    border-top: 2px solid #a8ad00; 
+    border-top: 2px solid $color_green; 
   }
 
   li:last-of-type {
     width: initial;
     padding: 15px 5%;
     border-radius: 10px;
-    background: orange;
+    background: $color_orange;
     a { 
-      color: #ffffff;
+      color: $color_light;
       display: flex;
       font-size: 22px;
       font-weight: 700;
@@ -284,7 +280,7 @@
 =================================*/
 
 .section5 {
-  .wrapper { border-top: 2px solid #a8ad00; }
+  .wrapper { border-top: 2px solid $color_green; }
 
   &__title {
     @include sec-title;
@@ -304,8 +300,8 @@
     width: 35.42%;
     padding: 50px 0 60px;
     margin: 0 auto;
-    border: 3px dashed #a8ad00;
-    background-color: #fff;
+    border: 3px dashed $color_green;
+    background-color: $color_light;
     text-align: center;
     transform: translateY(-50%);
     @include media-max(1023px) { 
@@ -324,16 +320,18 @@
     width: 71.92%;
     margin: 60px auto 0;
     li {
-      display: flex;
-      align-items: center;
-      // font-size: 29px;
+      @include flex(null,null,center);
       @include fluid-type(320px, 1903px, 20px, 29px);
       &:nth-child(2) { margin: 60px 0 60px; }
-      i { 
+      span { @include flex(null, null,center); }
+      span::before {
         margin-right: 20px;
-        // font-size: 68px; 
+        content: "\f0f6 ";
+        font-family: "FontAwesome";
+        font-size: 68px;
         @include fluid-type(320px, 1903px, 40px, 68px);
       }
+
     }
   }
 }

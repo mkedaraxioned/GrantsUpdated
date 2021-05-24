@@ -10,8 +10,8 @@ header{
     display: flex;
     // justify-content: space-between;
     align-items: center;
-    color: #FFF;
-    background-color: #a8ad00;
+    color: $color_light;
+    background-color: $color_green;
     text-transform: uppercase;
     font-size: 19px;
     
@@ -21,19 +21,10 @@ header{
     }
     a {
       position: relative;
-      color: #FFF;
+      color: $color_light;
       font-size: 18px;
       text-transform: capitalize;
       transition: .3s ease-in;
-      // &.active::after {
-      //   content: " ";
-      //   width: 50px; 
-      //   height: 2px;
-      //   display: block;
-      //   position: absolute;
-      //   bottom: -10px;
-      //   background-color: #FFF;
-      // }
     }
   
     .donate-btn {
@@ -42,22 +33,26 @@ header{
       border-radius: 15px;
       display: flex;
       align-items: center;
-      background: #fff;
-      color: #750e2b;
+      background: $color_light;
+      color: $color_red;
       font-weight: bold;
       font-size: 20px;
       text-transform: uppercase;
       cursor: pointer;
       transition: .3s ease-in;
-      &:hover {
-        border: 1px solid #000;
-        background-color: #750e2b;
-        color: #fff;
+       
+      &::after { 
+        content: "\f004";
+        margin-left: 20px;
+        font-family: "FontAwesome";
+        font-size: 32px;
+         
       }
 
-      .fa-heart {
-        margin-left: 20px;
-        font-size: 32px;
+      &:hover {
+        border: 1px solid $color_dark;
+        background-color: $color_red;
+        color: $color_light;
       }
 
       @include media-max(1023px) { display: none; }
@@ -77,7 +72,7 @@ header{
       {
         // padding: 0 4%;
         background-color: #40b781;
-        color: #000000;
+        color: $color_dark;
       
       }
                   
@@ -143,7 +138,7 @@ header{
     .header-effect {
       width: 100vw;
       height: 100vh;
-      background-color: #a8ad00;
+      background-color: $color_green;
     }
   
     .hamburger-effect {  background-color: rgba(0, 0, 0, 0.9);   }

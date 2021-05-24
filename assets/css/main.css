@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -124,7 +125,7 @@ header .wrapper {
   padding: 22px 0 33px;
   display: flex;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   background-color: #a8ad00;
   text-transform: uppercase;
   font-size: 19px;
@@ -137,7 +138,7 @@ header .wrapper .brand-name {
 }
 header .wrapper a {
   position: relative;
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   text-transform: capitalize;
   transition: 0.3s ease-in;
@@ -156,14 +157,16 @@ header .wrapper .donate-btn {
   cursor: pointer;
   transition: 0.3s ease-in;
 }
+header .wrapper .donate-btn::after {
+  content: "";
+  margin-left: 20px;
+  font-family: "FontAwesome";
+  font-size: 32px;
+}
 header .wrapper .donate-btn:hover {
   border: 1px solid #000;
   background-color: #750e2b;
   color: #fff;
-}
-header .wrapper .donate-btn .fa-heart {
-  margin-left: 20px;
-  font-size: 32px;
 }
 @media screen and (max-width: 1023px) {
   header .wrapper .donate-btn {
@@ -182,7 +185,7 @@ header .wrapper .navbar li {
 }
 header .wrapper .navbar a:hover {
   background-color: #40b781;
-  color: #000000;
+  color: #000;
 }
 header .wrapper .brand-name a {
   color: #fff;
@@ -398,8 +401,8 @@ header .wrapper .show {
   border-top: 2px solid #a8ad00;
   border-bottom: 2px solid #a8ad00;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -420,10 +423,10 @@ header .wrapper .show {
 .section1 .infolist li:last-child {
   padding: 15px 1.5%;
   border-radius: 10px;
-  background: orange;
+  background: #ffa500;
 }
 .section1 .infolist li:last-child a {
-  color: white;
+  color: color_light;
   font-weight: 700;
   font-size: 22px;
 }
@@ -529,7 +532,7 @@ header .wrapper .show {
 .section2-para {
   width: 72.37%;
   margin-top: 29px;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.6;
@@ -594,12 +597,12 @@ header .wrapper .show {
 .section3 .prioritylist li span {
   font-weight: 700;
 }
-.section3 .prioritylist li i {
+.section3 .prioritylist p::before {
   padding-right: 29px;
-  font-size: 27px;
-}
-.section3 .prioritylist .fa-chevron-circle-right {
+  content: "";
   color: #a8ad00;
+  font-family: "FontAwesome";
+  font-size: 27px;
 }
 .section3__bottom {
   width: 92.42%;
@@ -717,10 +720,10 @@ header .wrapper .show {
   width: initial;
   padding: 15px 5%;
   border-radius: 10px;
-  background: orange;
+  background: #ffa500;
 }
 .section4 .inner-community li:last-of-type a {
-  color: #ffffff;
+  color: #fff;
   display: flex;
   font-size: 22px;
   font-weight: 700;
@@ -832,19 +835,26 @@ header .wrapper .show {
 .section5 .downloadlist li:nth-child(2) {
   margin: 60px 0 60px;
 }
-.section5 .downloadlist li i {
-  margin-right: 20px;
+.section5 .downloadlist li span {
+  display: flex;
+  align-items: center;
 }
-.section5 .downloadlist li i {
+.section5 .downloadlist li span::before {
+  margin-right: 20px;
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 68px;
+}
+.section5 .downloadlist li span::before {
   font-size: 40px;
 }
 @media screen and (min-width: 320px) {
-  .section5 .downloadlist li i {
+  .section5 .downloadlist li span::before {
     font-size: calc(40px + 28 * ((100vw - 320px) / 1583));
   }
 }
 @media screen and (min-width: 1903px) {
-  .section5 .downloadlist li i {
+  .section5 .downloadlist li span::before {
     font-size: 68px;
   }
 }

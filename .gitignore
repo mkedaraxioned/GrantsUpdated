@@ -3,7 +3,7 @@ assets/css/style.css.map
 assets/scss/style.sass
 assets/scss/components/
 assets/scss/colors.sass
-assets/scss/abstracts/_variables.scss
+# assets/scss/abstracts/_variables.scss
 assets/scss/abstracts/_functions.scss
 assets/scss/SASS.txt
 assets/scss/layouts/_forms.scss

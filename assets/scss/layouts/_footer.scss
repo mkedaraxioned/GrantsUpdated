@@ -23,7 +23,7 @@ footer {
       flex-direction: column;
     } 
     a {
-      color: #000;
+      color: $color_dark;
       font-size: 22px;
    }
    @include media-max(767px) { padding: 10px 0; }
@@ -41,7 +41,7 @@ footer {
     @include media-max(767px) {
       &:last-of-type {     border-bottom: none;  } 
     padding: 10px; 
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid $color_dark;
     text-align: center;
   } 
 }
